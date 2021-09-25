@@ -1,0 +1,11 @@
+.c-link {
+    color: $light-text;
+
+    &.c-link--dark {
+        color: $header-text-color;
+    }
+}
+
+.c-link__icon {
+    margin-right: 13px;
+}

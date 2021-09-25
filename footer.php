@@ -18,20 +18,20 @@
         </div>
         <div class="l-footer__section u-shrink-0">
             <p class="c-footer-title">Kontakt</p>
-            <a href="tel:0651231233" class="c-footer-link">
-                <span class="c-footer-link__icon"><i class="fas fa-phone-alt"></i></span>
+            <a href="" class="c-link u-mb-8">
+                <span class="c-link__icon"><i class="fas fa-phone-alt"></i></span>
                 <span>0651231233</span>
             </a>
-            <a href="mailto:greenteamplus@gmail.com" class="c-footer-link">
-                <span class="c-footer-link__icon"><i class="fas fa-envelope"></i></span>
+            <a href="" class="c-link u-mb-8">
+                <span class="c-link__icon"><i class="fas fa-envelope"></i></span>
                 <span>greenteamplus@gmail.com</span>
             </a>
-            <a href="" class="c-footer-link">
-                <span class="c-footer-link__icon"><i class="fab fa-instagram"></i></span>
+            <a href="" class="c-link u-mb-8">
+                <span class="c-link__icon"><i class="fab fa-instagram"></i></span>
                 <span>@greenteamplus</span>
             </a>
-            <a href="" class="c-footer-link">
-                <span class="c-footer-link__icon"><i class="fab fa-facebook-square"></i></span>
+            <a href="" class="c-link u-mb-8">
+                <span class="c-link__icon"><i class="fab fa-facebook-square"></i></span>
                 <span>greenteamplus</span>
             </a>
         </div>

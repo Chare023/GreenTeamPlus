@@ -1,0 +1,21 @@
+.l-header{
+  display: flex;
+  justify-content: space-between;
+  height: 84px;
+  align-items: center;
+  padding: 0 40px;
+  color: $header-text-color;
+  box-shadow: 0px 1px 7px rgba(87, 87, 87, 0.13);
+}
+
+.l-header__logo {
+  max-width: 60px;
+  width: 100%;
+  margin-right: 110px;
+}
+
+.l-header__left {
+  display: flex;
+  align-items: center;
+}
+
