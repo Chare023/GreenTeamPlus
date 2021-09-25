@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "node-sass scss/main.scss style.css -w",
+    "compile": "node-sass scss/main.scss style.css",
+    "compress": "node-sass style.css style.css --output-style compressed"
+  },
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
