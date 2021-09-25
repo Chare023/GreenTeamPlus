@@ -6,14 +6,25 @@
 .l-footer-container {
     display: flex;
     padding: 2rem 0;
+
+    @include phone {
+        flex-direction: column;
+    }
 }
 
 .l-footer__section {
-    border-left: 1px solid grey;
+    border-left: 1px solid $border-color;
     padding: 0 40px;
+    display: flex;
+    flex-direction: column;
 
     &.l-footer__section--main {
         flex-basis: 40%;
         border: none;
+    }
+
+    @include phone {
+        margin-bottom: 20px;
+        padding: 0 20px;
     }
 }

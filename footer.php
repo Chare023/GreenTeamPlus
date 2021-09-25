@@ -7,36 +7,36 @@
         <div class="l-footer__section">
             <p class="c-footer-title">Usluge</p>
             <ul class="c-footer-list">
-                <li>Gipsarski radovi</li>
-                <li>Molerski i fasaderski radovi</li>
-                <li>Elektroinstalaterske usluge</li>
-                <li>Keramičarske usluge</li>
-                <li>Parketarske usluge</li>
-                <li>Zamena stolarije</li>
-                <li>Rušenje i odvoz šuta</li>
+                <li class="c-footer-list__item">Gipsarski radovi</li>
+                <li class="c-footer-list__item">Molerski i fasaderski radovi</li>
+                <li class="c-footer-list__item">Elektroinstalaterske usluge</li>
+                <li class="c-footer-list__item">Keramičarske usluge</li>
+                <li class="c-footer-list__item">Parketarske usluge</li>
+                <li class="c-footer-list__item">Zamena stolarije</li>
+                <li class="c-footer-list__item">Rušenje i odvoz šuta</li>
             </ul>
         </div>
-        <div class="l-footer__section">
+        <div class="l-footer__section u-shrink-0">
             <p class="c-footer-title">Kontakt</p>
-            <a href="" class="c-footer-link">
+            <a href="tel:0651231233" class="c-footer-link">
                 <span class="c-footer-link__icon"><i class="fas fa-phone-alt"></i></span>
                 <span>0651231233</span>
             </a>
-            <a href="" class="c-footer-link">
-                <span class="c-footer-link__icon"></span>
+            <a href="mailto:greenteamplus@gmail.com" class="c-footer-link">
+                <span class="c-footer-link__icon"><i class="fas fa-envelope"></i></span>
                 <span>greenteamplus@gmail.com</span>
             </a>
             <a href="" class="c-footer-link">
-                <span class="c-footer-link__icon"></span>
+                <span class="c-footer-link__icon"><i class="fab fa-instagram"></i></span>
                 <span>@greenteamplus</span>
             </a>
             <a href="" class="c-footer-link">
-                <span class="c-footer-link__icon"></span>
+                <span class="c-footer-link__icon"><i class="fab fa-facebook-square"></i></span>
                 <span>greenteamplus</span>
             </a>
         </div>
     </div>
-    <p>Copyright © 2021 greenteamplus.rs - sva prava zadržana.</p>
+    <p class="u-text-center">Copyright © 2021 greenteamplus.rs - sva prava zadržana.</p>
 </footer>
 </body>
 </html>
