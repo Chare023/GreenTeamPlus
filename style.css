@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   Theme name: Green team plus
   Author: Bane
@@ -105,3 +106,52 @@ a {
 
 .l-ctn {
   flex-grow: 1; }
+
+.c-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 84px); }
+
+.slick-dots {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(100% - 30px);
+  left: 50%; }
+  .slick-dots > li > button {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent; }
+    .slick-dots > li > button::before {
+      font-size: 16px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      content: '•';
+      text-align: center;
+      color: #EBEBEB;
+      -webkit-font-smoothing: antialiased; }
+
+.slick-arrow {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5; }
+  .slick-arrow.slick-next {
+    right: 20px;
+    left: auto; }

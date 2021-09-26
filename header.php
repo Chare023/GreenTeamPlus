@@ -4,6 +4,8 @@
 <head>
   <?php wp_head(); ?>
   <script src="https://kit.fontawesome.com/23930a8e62.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 
 <body>
