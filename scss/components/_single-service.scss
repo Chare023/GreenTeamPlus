@@ -1,0 +1,40 @@
+.c-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px;
+
+  @include tablet-landscape-up {
+    flex-direction: row;
+    margin: 20px 20px 120px 20px;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.c-service__title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+  color: #838181;
+}
+
+.c-service__text {
+  padding: 30px 0;
+
+  @include tablet-landscape-up {
+    margin-right: 20%;
+  }
+}
+
+.c-service__img {
+  width: 70%;
+  border-radius: 20px;
+
+  @include tablet-landscape-up {
+    max-width: 370px;
+  }
+}

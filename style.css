@@ -59,6 +59,117 @@ a {
 .c-footer-list__item {
   margin-bottom: 8px; }
 
+.c-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px; }
+  @media (min-width: 900px) {
+    .c-service {
+      flex-direction: row;
+      margin: 20px 20px 120px 20px;
+      justify-content: space-between;
+      text-align: left; } }
+
+.c-service__title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+  color: #838181; }
+
+.c-service__text {
+  padding: 30px 0; }
+  @media (min-width: 900px) {
+    .c-service__text {
+      margin-right: 20%; } }
+
+.c-service__img {
+  width: 70%;
+  border-radius: 20px; }
+  @media (min-width: 900px) {
+    .c-service__img {
+      max-width: 370px; } }
+
+.c-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 84px); }
+  .c-slider .slick-dots {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    position: absolute;
+    top: calc(100% - 30px);
+    left: 50%; }
+    .c-slider .slick-dots > li > button {
+      position: relative;
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: transparent; }
+      .c-slider .slick-dots > li > button::before {
+        font-size: 16px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        color: #EBEBEB;
+        -webkit-font-smoothing: antialiased; }
+  .c-slider .slick-arrow {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5; }
+    .c-slider .slick-arrow.slick-next {
+      right: 20px;
+      left: auto; }
+  .c-slider .slick-list,
+  .c-slider .slick-track {
+    height: 100%; }
+    .c-slider .slick-list > img,
+    .c-slider .slick-track > img {
+      height: 100%;
+      object-fit: cover; }
+
+.c-card {
+  border-radius: 4px;
+  box-shadow: 1px 2px 16px 1px #dbdbdb;
+  overflow: hidden;
+  cursor: pointer; }
+  .c-card:hover .c-card__img {
+    filter: grayscale(0);
+    opacity: 0.9; }
+
+.c-card__img-wrap {
+  height: 250px;
+  overflow: hidden; }
+
+.c-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter, opacity 0.2s ease-in-out;
+  filter: grayscale(20%); }
+
+.c-card__description {
+  padding: 20px; }
+
 .l-footer {
   background-color: #3A3A3A;
   color: #EBEBEB; }
@@ -104,6 +215,22 @@ a {
 .l-nav__link {
   margin-right: 27px; }
 
+.l-projects-grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr; }
+  @media (min-width: 600px) {
+    .l-projects-grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1200px) {
+    .l-projects-grid {
+      grid-template-columns: repeat(3, 1fr); } }
+
+.c-section__info {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center; }
+
 .l-ctn {
   flex-grow: 1; }
 
@@ -112,98 +239,16 @@ a {
   height: fit-content;
   display: block;
   margin: 0 120px;
-  color: #333; }
+  color: #333;
+  max-width: 1440px;
+  margin: 0 auto; }
 
-.c-section__title {
+.l-section__title {
   width: fit-content;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   padding: 17px;
   font-size: 30px;
-  border-bottom: 2px solid #BAFFA9;
+  border-bottom: 2px solid #baffa9;
   margin-bottom: 100px; }
-
-.c-section-nase-usluge {
-  display: flex;
-  margin: 20px 20px 120px 20px;
-  justify-content: space-around;
-  padding: 0 100px; }
-
-.c-nase-usluge-content__info {
-  width: 70%;
-  padding-top: 30px; }
-
-.c-nase-usluge-content__img {
-  width: 300px;
-  border-radius: 20px; }
-
-.l-nasi-projekti {
-  margin: 0 auto;
-  height: initial;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly; }
-
-.c-nasi-projekti__card {
-  width: 400px;
-  margin: 0 15px 30px 15px;
-  text-align: center;
-  box-shadow: 2px 3px 9px; }
-
-.c-nasi-projekti__img {
-  width: inherit; }
-
-.c-section__info {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center; }
-
-.c-slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: calc(100vh - 84px); }
-
-.slick-dots {
-  display: flex;
-  list-style: none;
-  margin: 0 auto;
-  position: absolute;
-  top: calc(100% - 30px);
-  left: 50%; }
-  .slick-dots > li > button {
-    position: relative;
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent; }
-    .slick-dots > li > button::before {
-      font-size: 16px;
-      line-height: 20px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      content: '•';
-      text-align: center;
-      color: #EBEBEB;
-      -webkit-font-smoothing: antialiased; }
-
-.slick-arrow {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5; }
-  .slick-arrow.slick-next {
-    right: 20px;
-    left: auto; }
