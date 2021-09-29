@@ -1,3 +1,65 @@
 .l-ctn {
   flex-grow: 1;
 }
+
+.l-section {
+  //border: 2px solid rgb(214, 163, 163);
+  padding: 20px;
+  height: fit-content;
+  display: block;
+  margin: 0 120px;
+  color: $grey;
+}
+
+.c-section__title {
+  width: fit-content;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 17px;
+  font-size: 30px;
+  border-bottom: 2px solid #BAFFA9;
+  margin-bottom: 100px;
+}
+
+.c-section-nase-usluge {
+  display: flex;
+  margin: 20px 20px 120px 20px;
+  justify-content: space-around;
+  padding: 0 100px;
+}
+
+.c-nase-usluge-content__info {
+  width: 70%;
+  padding-top: 30px;
+}
+
+.c-nase-usluge-content__img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.l-nasi-projekti {
+  margin: 0 auto;
+  height: initial;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.c-nasi-projekti__card {
+  width: 400px;
+  margin: 0 15px 30px 15px;
+  text-align: center;
+  box-shadow: 2px 3px 9px
+}
+
+.c-nasi-projekti__img {
+  width: inherit;
+}
+
+.c-section__info {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
