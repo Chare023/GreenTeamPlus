@@ -122,11 +122,37 @@ get_header();
   <section class="l-section l-section--about-us">
     <h3 class="l-section__title">Zasto bas mi?</h3>
     <p class="c-section__info">Zbog velikog iskustva i stvarnog fokusa na zadovoljstvo korisnika, možete se osloniti na nas za kompletne poslove renoviranja i adaptacije,
-      kao i za individualne radove (građevinske, gipsarsko-molerske, elektroinstalaterske, parketarske i ostalo).</p><br>
-    <p class="c-section__info">Pružamo profesionalne usluge i za fizička i za pravna lica.</p>
+      kao i za individualne radove (građevinske, gipsarsko-molerske, elektroinstalaterske, parketarske i ostalo).
+      <br><br>Pružamo profesionalne usluge i za fizička i za pravna lica.</p>
+    <div class="c-about-us-grid">
 
-    <div class="c-section__card">
-      <i class="fas fa-truck"></i>
+      <div class="c-about-us-grid__item">
+        <div class="c-about-us__icon-wrap">
+          <i class="c-about-us__icon fas fa-truck"></i>
+        </div>
+        <div class="c-about-us__description">
+          <p>Brza Usluga</p>
+        </div>
+      </div>
+
+      <div class="c-about-us-grid__item">
+        <div class="c-about-us__icon-wrap">
+          <i class="c-about-us__icon fas fa-thumbs-up"></i>
+        </div>
+        <div class="c-about-us__description">
+          <p>Velik broj zadovoljnih klijenata</p>
+        </div>
+      </div> 
+
+      <div class="c-about-us-grid__item">
+        <div class="c-about-us__icon-wrap">
+          <i class="c-about-us__icon fas fa-check-square"></i>
+        </div>
+        <div class="c-about-us__description">
+          <p>Kvalitet na prvom mestu</p>
+        </div>
+      </div> 
+
     </div>
 
   </section>

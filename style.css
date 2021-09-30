@@ -170,6 +170,37 @@ a {
 .c-card__description {
   padding: 20px; }
 
+.c-about-us-grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center; }
+  @media (min-width: 600px) {
+    .c-about-us-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: unset; } }
+
+.c-about-us__icon-wrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 0 auto; }
+
+.c-about-us__icon {
+  color: #baffa9;
+  font-size: 30px; }
+
+.c-about-us__description {
+  text-align: center;
+  padding-top: 20px;
+  min-width: max-content; }
+
 .l-footer {
   background-color: #3A3A3A;
   color: #EBEBEB; }
@@ -229,7 +260,8 @@ a {
 .c-section__info {
   width: 70%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 80px; }
 
 .l-ctn {
   flex-grow: 1; }
