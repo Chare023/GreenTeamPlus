@@ -1,11 +1,20 @@
 .c-link {
-    color: $light-text;
+  color: $light-text;
+  @include link-hover-active-transition;
 
-    &.c-link--dark {
-        color: $header-text-color;
+  &.c-link--dark {
+    color: $header-text-color;
+  }
+
+  &.c-link--nav {
+    color: $header-text-color;
+
+    &:active {
+        opacity: 0.7;
     }
+  }
 }
 
 .c-link__icon {
-    margin-right: 13px;
+  margin-right: 13px;
 }

@@ -1,5 +1,5 @@
 <?php wp_footer();?>
-<footer class="l-footer">
+<footer id="kontakt" class="l-footer">
     <div class="l-footer-container">
         <div class="l-footer__section l-footer__section--main">
             
@@ -20,19 +20,19 @@
             <p class="c-footer-title">Kontakt</p>
             <a href="" class="c-link u-mb-16">
                 <span class="c-link__icon"><i class="fas fa-phone-alt"></i></span>
-                <span>0651231233</span>
+                <span><?php echo get_field('working_hours'); ?></span>
             </a>
             <a href="" class="c-link u-mb-16">
                 <span class="c-link__icon"><i class="fas fa-envelope"></i></span>
-                <span>greenteamplus@gmail.com</span>
+                <span><?php echo get_field('e-mail'); ?></span>
             </a>
-            <a href="" class="c-link u-mb-16">
+            <a target="_blank" href="<?php echo get_field('instagram_url')['url']; ?>" class="c-link u-mb-16">
                 <span class="c-link__icon"><i class="fab fa-instagram"></i></span>
-                <span>@greenteamplus</span>
+                <span><?php echo get_field('instagram_url')['title']; ?></span>
             </a>
-            <a href="" class="c-link u-mb-16">
+            <a target="_blank" href="<?php echo get_field('facebook_url')['url']; ?>" class="c-link u-mb-16">
                 <span class="c-link__icon"><i class="fab fa-facebook-square"></i></span>
-                <span>greenteamplus</span>
+                <span><?php echo get_field('facebook_url')['title']; ?></span>
             </a>
         </div>
     </div>

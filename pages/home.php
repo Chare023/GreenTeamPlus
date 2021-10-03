@@ -14,7 +14,7 @@ get_header();
   </div>
 
   <section class="l-section l-section--services">
-    <h3 class="l-section__title">Nase usluge</h3>
+    <h3 id="usluge" class="l-section__title">Nase usluge</h3>
 
     <div class="c-service">
       <div class="c-service__info">
@@ -45,7 +45,7 @@ get_header();
   <!--Nasi projekti-->
 
   <section class="l-section l-section--projects">
-    <h3 class="l-section__title">Nasi projekti</h3>
+    <h3 id="galerija" class="l-section__title">Nasi projekti</h3>
     <div class="l-projects-grid">
 
       <div class="l-projects-grid__item">
@@ -160,7 +160,7 @@ get_header();
   <!-- O nama -->
 
   <section class="l-section">
-    <h3 class="l-section__title">O nama</h3>
+    <h3 id="o-nama" class="l-section__title">O nama</h3>
     <p class="c-section__info">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
   </section>
 </main>

@@ -16,7 +16,8 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth; }
 
 body {
   display: flex;
@@ -42,10 +43,23 @@ a {
 .u-ml-40 {
   margin-left: 40px; }
 
+.u-mr-25 {
+  margin-right: 25px; }
+
 .c-link {
-  color: #EBEBEB; }
+  color: #EBEBEB;
+  transition: all 0.2s ease-in-out; }
+  .c-link:hover {
+    opacity: 0.8; }
+  .c-link:active {
+    opacity: 1;
+    color: #baffa9; }
   .c-link.c-link--dark {
     color: #636363; }
+  .c-link.c-link--nav {
+    color: #636363; }
+    .c-link.c-link--nav:active {
+      opacity: 0.7; }
 
 .c-link__icon {
   margin-right: 13px; }
@@ -252,8 +266,11 @@ a {
   display: flex;
   align-items: center; }
 
-.l-nav__link {
-  margin-right: 27px; }
+.l-nav__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  list-style: none; }
 
 .l-projects-grid {
   display: grid;

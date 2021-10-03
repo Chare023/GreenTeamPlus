@@ -15,21 +15,18 @@
       <div class="l-header__logo-wrap">
         <img class="l-header__logo" src="<?php echo get_template_directory_uri().'/screenshot.png'; ?>">
       </div>
-      <nav class="l-nav">
-        <a class="l-nav__link" href="#">Usluge</a>
-        <a class="l-nav__link" href="#">Galerija</a>
-        <a class="l-nav__link" href="#">O nama</a>
-        <a class="l-nav__link" href="#">Kontakt</a>
-      </nav>
+      <?php
+        if (function_exists(clean_custom_menus())) clean_custom_menus();
+      ?>
     </div>
     <div class="l-header__right">
       <a href="" class="c-link c-link--dark">
         <span class="c-link__icon"><i class="fas fa-phone-alt"></i></span>
-        <span>0651231233</span>
+        <span><?php echo get_field('phone_number'); ?></span>
       </a>
       <a href="" class="c-link c-link--dark u-ml-40">
         <span class="c-link__icon"><i class="fas fa-clock"></i></span>
-        <span>Pon-Sub 08.00 - 16.00</span>
+        <span><?php echo get_field('working_hours'); ?></span>
       </a>
     </div>
   </header>
