@@ -42,12 +42,26 @@
     }
   }
 
-  .slick-arrow {
+  .c-slider__arrow {
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 5;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $main-green-color;
+    }
+
 
     &.slick-next {
       right: 20px;

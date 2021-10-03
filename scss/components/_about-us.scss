@@ -1,15 +1,12 @@
 .c-about-us-grid {
   display: grid;
-  grid-gap: 30px;
+  grid-row-gap: 100px;
   grid-template-columns: 1fr;
-  justify-items: center;
-  align-items: center;
-  
-  @include tablet-portrait-up {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:unset;
-  }
 
+  @include tablet-landscape-up {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
 }
 
 .c-about-us__icon-wrap {
@@ -22,16 +19,14 @@
   border-radius: 50%;
   background-color: $grey;
   margin: 0 auto;
-  
 }
 
 .c-about-us__icon {
-  color: #baffa9;
+  color: $main-green-color;
   font-size: 30px;
 }
 
 .c-about-us__description {
   text-align: center;
   padding-top: 20px;
-  min-width: max-content;
 }
