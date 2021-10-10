@@ -82,12 +82,17 @@ get_header();
   <!--Zasto bas mi-->
 
   <section class="l-section l-section--about-us">
-    <h3 class="l-section__title">Zasto bas mi?</h3>
-    <p class="c-section__info">Zbog velikog iskustva i stvarnog fokusa na zadovoljstvo korisnika, možete se osloniti na
-      nas za kompletne poslove renoviranja i adaptacije,
-      kao i za individualne radove (građevinske, gipsarsko-molerske, elektroinstalaterske, parketarske i ostalo).
-      <br><br>Pružamo profesionalne usluge i za fizička i za pravna lica.
-    </p>
+    <?php
+    $zastoBasMi = New WP_Query(array(
+      'category_name' => 'zasto_bas_mi'
+    ));
+    
+    while ($zastoBasMi->have_posts()) {
+      $zastoBasMi->the_post(); ?>
+    <h3 class="l-section__title"><?php the_title(); ?></h3>
+    <?php echo the_content() ?>
+    <?php } ?>
+
     <div class="c-about-us-grid">
 
       <div class="c-about-us-grid__item">
@@ -124,12 +129,16 @@ get_header();
   <!-- O nama -->
 
   <section class="l-section">
-    <h3 id="o-nama" class="l-section__title">O nama</h3>
-    <p class="c-section__info">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-      necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
-      combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The
-      generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-    </p>
+    <?php
+    $oNama = New WP_Query(array(
+      'category_name' => 'onama'
+    ));
+    
+    while ($oNama->have_posts()) {
+      $oNama->the_post(); ?>
+    <h3 id="o-nama" class="l-section__title"><?php the_title(); ?></h3>
+    <?php echo the_content() ?>
+    <?php } ?>
   </section>
 </main>
 
