@@ -4,9 +4,9 @@
 ?>
 <footer id="kontakt" class="l-footer">
   <div class="l-footer-container">
-    <div class="l-footer__section l-footer__section--main">
+    <!-- <div class="l-footer__section l-footer__section--main">
 
-    </div>
+    </div> -->
     <div class="l-footer__section">
       <p class="c-footer-title">Usluge</p>
       <ul class="c-footer-list">
@@ -25,7 +25,7 @@
         <span class="c-link__icon"><i class="fas fa-phone-alt"></i></span>
         <span><?php echo get_field('working_hours'); ?></span>
       </a>
-      <a href="" class="c-link u-mb-16">
+      <a href="mailto:<?php echo get_field('e-mail'); ?>" class="c-link u-mb-16">
         <span class="c-link__icon"><i class="fas fa-envelope"></i></span>
         <span><?php echo get_field('e-mail'); ?></span>
       </a>

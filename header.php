@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
   <?php wp_head(); ?>
   <script src="https://kit.fontawesome.com/23930a8e62.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -26,7 +26,7 @@
       ?>
     </div>
     <div class="l-header__right">
-      <a href="" class="c-link c-link--dark">
+      <a href="tel:<?php echo get_field('phone_number'); ?>" class="c-link c-link--dark">
         <span class="c-link__icon"><i class="fas fa-phone-alt"></i></span>
         <span><?php echo get_field('phone_number'); ?></span>
       </a>

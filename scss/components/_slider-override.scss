@@ -13,6 +13,20 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @include phone {
+      top: calc(100% - 50px);
+    }
+
+    > li {
+      &.slick-active {
+        > button {
+          &::before {
+            color: $main-green-color;
+          }
+        }
+      }
+    }
+
     > li > button {
       position: relative;
       font-size: 0;
@@ -45,18 +59,19 @@
 
   .c-slider__arrow {
     position: absolute;
-    left: 20px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     z-index: 5;
     color: #fff;
     font-size: 28px;
     cursor: pointer;
+    padding: 20px;
     @include link-hover-active-transition;
 
 
     &.slick-next {
-      right: 20px;
+      right: 0;
       left: auto;
     }
   }

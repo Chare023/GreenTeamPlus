@@ -5,6 +5,8 @@
 
 .l-footer-container {
     display: flex;
+    // TODO: Footer left section
+    justify-content: flex-end;
     padding: 2rem 0;
 
     @include tablet-portrait-down {
