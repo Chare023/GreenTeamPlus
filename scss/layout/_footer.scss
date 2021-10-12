@@ -7,8 +7,9 @@
     display: flex;
     padding: 2rem 0;
 
-    @include phone {
+    @include tablet-portrait-down {
         flex-direction: column;
+        padding-top: 2rem;
     }
 }
 
@@ -23,8 +24,10 @@
         border: none;
     }
 
-    @include phone {
-        margin-bottom: 20px;
-        padding: 0 20px;
+    @include tablet-portrait-down {
+        margin-bottom: 40px;
+        padding: 0 20px 20px;
+        border-left: none;
+        border-bottom: 1px solid $border-color;
     }
 }

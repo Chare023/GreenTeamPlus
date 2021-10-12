@@ -4,6 +4,12 @@
   }
 }
 
+@mixin tablet-portrait-down {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
 @mixin tablet-portrait-up {
   @media (min-width: 600px) {
     @content;

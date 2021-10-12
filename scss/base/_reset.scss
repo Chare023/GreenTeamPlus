@@ -10,6 +10,10 @@ html {
     min-height: 100%;
     font-family: 'Ubuntu', sans-serif;
     scroll-behavior: smooth;
+
+    &.header-is-open {
+        overflow: hidden;
+    }
 }
 
 body {

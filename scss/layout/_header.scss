@@ -1,4 +1,4 @@
-.l-header{
+.l-header {
   display: flex;
   justify-content: space-between;
   height: 84px;
@@ -9,10 +9,10 @@
 
   @include header-nav {
     flex-direction: row-reverse;
+    padding: 0 20px;
   }
 
-
-  &.is-open {
+  .header-is-open & {
     width: 100vw;
     height: 100vh;
     font-size: 22px;
@@ -23,37 +23,54 @@
     left: 0;
     z-index: 5;
     background-color: white;
+    align-items: flex-start;
 
-    .l-header__left, .l-header__right {
-      display: block;
-      margin: 20px auto;
+    .l-header__left,
+    .l-header__right {
+      display: flex;
+    }
+
+    .l-header__left {
+      margin: 0 auto;
+    }
+
+    .l-header__right {
+      flex-direction: column;
+      align-items: flex-start;
+
     }
 
     .l-header__right > a {
       margin: 0;
       display: block;
-      text-align: center;
-      padding: 20px;
-      font-size: 20px;
+      padding: 10px 0;
+      font-size: 14px;
     }
     .l-header__menu {
       display: none;
     }
+
+    .l-header__logo-wrap {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+    }
+
     .l-header__logo {
       margin-right: auto;
     }
-    .l-header__toggle-menu{
+    .l-header__toggle-menu {
       display: flex;
-      font-size: 40px;
+      font-size: 38px;
       margin-left: auto;
-      padding: 0 25px;
     }
+    
   }
 }
 
 .l-header__logo {
-  max-width: 110px;
-  width: 100%;
+  height: 50px;
+  width: auto;
   margin-right: 110px;
 }
 
@@ -76,7 +93,7 @@
 
   @include header-nav {
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     margin-left: auto;
   }
 }

@@ -39,7 +39,7 @@
       </a>
     </div>
   </div>
-  <p class="u-text-center">Copyright © 2021 greenteamplus.rs - sva prava zadržana.</p>
+  <p class="c-footer-copyright">Copyright © 2021 greenteamplus.rs - sva prava zadržana.</p>
 </footer>
 </body>
 </html>

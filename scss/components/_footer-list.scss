@@ -1,14 +1,22 @@
 .c-footer-title {
   margin-bottom: 20px;
   text-decoration: underline;
-  font-size: 14px;
 }
 
 .c-footer-list {
   margin-left: 10px;
-  font-size: 12px;
+
+  @include phone {
+    margin-left: 20px;
+  }
 }
 
 .c-footer-list__item {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.c-footer-copyright {
+  padding: 0 30px 30px;
+  text-align: center;
+  line-height: 1.5;
 }
