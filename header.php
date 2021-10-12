@@ -10,7 +10,13 @@
 
 <body>
   <!--Header-->
-  <header class="l-header">
+  <header class="l-header" id="header">
+    <div class="l-header__menu" id="header-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="l-header__toggle-menu" id="toggle-header-menu">
+      <i class="fas fa-times"></i>
+    </div>
     <div class="l-header__left">
       <div class="l-header__logo-wrap">
         <img class="l-header__logo" src="<?php echo get_template_directory_uri().'/screenshot.png'; ?>">
@@ -29,4 +35,5 @@
         <span><?php echo get_field('working_hours'); ?></span>
       </a>
     </div>
+
   </header>

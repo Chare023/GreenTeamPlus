@@ -1,6 +1,25 @@
+.l-nav { 
+  
+  @include header-nav {
+    display: none;
+  }
+  
+  .is-open & {
+    text-align: center;
+    display: flex;
+  }
+}
+
 .l-nav__list {
   display: flex;
   align-items: center;
   list-style: none;
-  list-style: none;
+
+  .is-open & {
+    flex-direction: column;
+
+    & > li {
+      padding: 10px;
+    }
+  }
 }

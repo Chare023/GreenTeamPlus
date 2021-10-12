@@ -16,6 +16,12 @@
   }
 }
 
+@mixin header-nav {
+  @media (max-width: 1100px) {
+     @content;
+  }
+}
+
 @mixin desktop-up {
   @media (min-width: 1200px) {
     @content;

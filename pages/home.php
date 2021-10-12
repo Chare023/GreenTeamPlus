@@ -6,7 +6,7 @@ get_header();
 
 <!-- Slider -->
 
-<main class="l-ctn">
+<main class="l-ctn" id="main-ctn">
   <div class="c-slider">
     <img src="<?php echo get_field('slider_image_1')['url']; ?>" alt="">
     <img src="<?php echo get_field('slider_image_2')['url']; ?>" alt="">

@@ -10,7 +10,8 @@ body {
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 html {
   display: flex;
@@ -262,6 +263,38 @@ a {
   padding: 0 40px;
   color: #636363;
   box-shadow: 0px 1px 7px rgba(87, 87, 87, 0.13); }
+  @media (max-width: 1100px) {
+    .l-header {
+      flex-direction: row-reverse; } }
+  .l-header.is-open {
+    width: 100vw;
+    height: 100vh;
+    font-size: 22px;
+    padding: 20px;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: white; }
+    .l-header.is-open .l-header__left, .l-header.is-open .l-header__right {
+      display: block;
+      margin: 20px auto; }
+    .l-header.is-open .l-header__right > a {
+      margin: 0;
+      display: block;
+      text-align: center;
+      padding: 20px;
+      font-size: 20px; }
+    .l-header.is-open .l-header__menu {
+      display: none; }
+    .l-header.is-open .l-header__logo {
+      margin-right: auto; }
+    .l-header.is-open .l-header__toggle-menu {
+      display: flex;
+      font-size: 40px;
+      margin-left: auto;
+      padding: 0 25px; }
 
 .l-header__logo {
   max-width: 110px;
@@ -272,11 +305,40 @@ a {
   display: flex;
   align-items: center; }
 
+.l-header__right {
+  display: flex;
+  align-items: center; }
+  @media (max-width: 1100px) {
+    .l-header__right {
+      display: none; } }
+
+.l-header__menu {
+  display: none; }
+  @media (max-width: 1100px) {
+    .l-header__menu {
+      display: flex;
+      font-size: 40px;
+      margin-left: auto; } }
+
+.l-header__toggle-menu {
+  display: none; }
+
+@media (max-width: 1100px) {
+  .l-nav {
+    display: none; } }
+
+.is-open .l-nav {
+  text-align: center;
+  display: flex; }
+
 .l-nav__list {
   display: flex;
   align-items: center;
-  list-style: none;
   list-style: none; }
+  .is-open .l-nav__list {
+    flex-direction: column; }
+    .is-open .l-nav__list > li {
+      padding: 10px; }
 
 .l-projects-grid {
   display: grid;
@@ -317,3 +379,6 @@ a {
   font-size: 30px;
   border-bottom: 2px solid #baffa9;
   margin-bottom: 100px; }
+
+.hide {
+  overflow: hidden; }
