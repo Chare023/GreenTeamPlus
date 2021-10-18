@@ -48,6 +48,16 @@ function my_theme_setup(){
 	add_theme_support('post-thumbnails');
 }
 
+add_filter( 'use_default_gallery_style', '__return_false' );
+
+
 add_action('after_setup_theme', 'my_theme_setup');
+
+function disable_wp_responsive_images() {
+	return 1;
+}
+add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
+
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 ?>
