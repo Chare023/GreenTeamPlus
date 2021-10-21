@@ -20,7 +20,7 @@ get_header();
 
  
   <section class="l-section l-section--services">
-    <h3 id="usluge" class="l-section__title">Naše usluge</h3>
+    <h3 id="usluge" class="c-page-title">Naše usluge</h3>
     
     <?php
       $naseUsluge = New WP_Query(array(
@@ -52,7 +52,7 @@ get_header();
   <!--Nasi projekti-->
 
   <section class="l-section l-section--projects">
-    <h3 id="galerija" class="l-section__title">Naši projekti</h3>
+    <h3 id="galerija" class="c-page-title">Naši projekti</h3>
     <div class="l-projects-grid">
 
       <?php
@@ -95,7 +95,7 @@ get_header();
     
     while ($zastoBasMi->have_posts()) {
       $zastoBasMi->the_post(); ?>
-    <h3 class="l-section__title"><?php the_title(); ?></h3>
+    <h3 class="c-page-title"><?php the_title(); ?></h3>
     <?php echo the_content() ?>
     <?php } ?>
 
@@ -143,7 +143,7 @@ get_header();
     
     while ($oNama->have_posts()) {
       $oNama->the_post(); ?>
-    <h3 id="o-nama" class="l-section__title"><?php the_title(); ?></h3>
+    <h3 id="o-nama" class="c-page-title"><?php the_title(); ?></h3>
     <?php echo the_content() ?>
     <?php } ?>
   </section>
