@@ -3,15 +3,27 @@
     color: $light-text;
 }
 
+.l-footer__logo {
+    max-height: 130px;
+    position: absolute;
+    margin-top: 32px;
+
+    @include tablet-portrait-down {
+        display: none;
+    }
+}
+
 .l-footer-container {
     display: flex;
     // TODO: Footer left section
-    justify-content: flex-end;
+    justify-content: space-around;
     padding: 2rem 0;
+    margin-left: 30%;
 
     @include tablet-portrait-down {
         flex-direction: column;
         padding-top: 2rem;
+        margin-left: 0;
     }
 }
 
@@ -24,6 +36,11 @@
     &.l-footer__section--main {
         flex-basis: 40%;
         border: none;
+        max-width: fit-content;
+
+        @include tablet-portrait-down {
+            display: none;
+        }
     }
 
     @include tablet-portrait-down {

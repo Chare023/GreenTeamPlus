@@ -1,0 +1,18 @@
+.c-page-title {
+  display: inline-block;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 17px;
+  font-size: 30px;
+  border-bottom: 2px solid $main-green-color;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  
+  &.c-page-title--single {
+    font-size: 30px;
+    border-bottom: none;
+    margin: 0 0 20px 0;
+    justify-content: flex-start;
+    padding: 0;
+  }
+}

@@ -1,8 +1,11 @@
 .c-card {
+  display: flex;
+  flex-direction: column;
   border-radius: 4px;
   box-shadow: 1px 2px 16px 1px #dbdbdb;
   overflow: hidden;
   cursor: pointer;
+  flex: 1;
 
   &:hover {
     .c-card__img {
@@ -10,7 +13,69 @@
       opacity: 0.9;
     }
   }
+
+  &.c-card--single-post {
+    margin-bottom: 20px;
+
+    .c-card__title {
+      margin: 8px;
+    }
+
+    .c-card__img-wrap {
+      height: 150px;
+
+      @include header-nav {
+        height: 350px;
+      }
+
+      @include phone {
+        height: 250px;
+      }
+    }
+
+    .c-card__description {
+      font-size: 12px;
+      padding: 0 8px 8px;
+    }
+  }
 }
+
+.c-card__title {
+  margin-bottom: 10px;
+  line-height: 1.4;
+
+  @include header-nav {
+    font-size: 24px;
+  }
+}
+
+.c-card__description {
+  margin-bottom: 5px;
+  line-height: 1.2;
+
+  @include header-nav {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  &.c-card__description > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.c-card__date {
+  opacity: 0.7;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.2;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
 
 .c-card__img-wrap {
   height: 250px;

@@ -1,0 +1,64 @@
+.l-single-post {
+  display: flex;
+  margin: 0 120px;
+  color: $grey;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include header-nav {
+    flex-direction: column;
+  }
+}
+
+.l-single-post__main {
+  flex: 1;
+  margin-right: 40px;
+  
+  @include header-nav {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.l-single-post__aside {
+  width: 25%;
+  color: $grey;
+
+  @include header-nav {
+    width: 100%;
+  }
+}
+
+.l-single-post__ctn {
+  line-height: 1.4;
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.l-single-post__feature {
+  height: 50vh;
+  max-height: 600px;
+
+  @include header-nav {
+    height: 45vh;
+  }
+
+  @include phone {
+    height: 38vh;
+  }
+}
+
+.l-single-post__feature > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+.l-section-other-posts__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}

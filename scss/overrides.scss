@@ -1,0 +1,40 @@
+.gallery {
+  height: 100px;
+  margin-top: 2px;
+  display: flex;
+  margin-bottom: 20px;
+
+  @include tablet-portrait-down() {
+    height: 70px;
+  }
+
+  @include phone {
+    height: 50px;
+  }
+}
+
+.gallery-item {
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+
+  &:not(:last-of-type) {
+    margin-right: 2px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.gallery-icon {
+  height: inherit;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}

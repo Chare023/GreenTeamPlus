@@ -19,7 +19,9 @@
     </div>
     <div class="l-header__left">
       <div class="l-header__logo-wrap">
-        <img class="l-header__logo" src="<?php echo get_template_directory_uri().'/screenshot.png'; ?>">
+        <a href="<?php echo get_home_url(); ?>"> 
+          <img class="l-header__logo" src="<?php echo get_template_directory_uri().'/screenshot.png'; ?>">
+        </a>
       </div>
       <?php
         if (function_exists(clean_custom_menus())) clean_custom_menus();

@@ -1,7 +1,9 @@
 <?php /* Template Name: Home */ ?>
 
 <?php
+
 get_header();
+
 ?>
 
 <!-- Slider -->
@@ -16,9 +18,10 @@ get_header();
 
   <!-- Nase Usluge -->
 
+ 
   <section class="l-section l-section--services">
-    <h3 id="usluge" class="l-section__title">Nase usluge</h3>
-
+    <h3 id="usluge" class="c-page-title">Naše usluge</h3>
+    
     <?php
       $naseUsluge = New WP_Query(array(
         'posts_per_page' => 3,
@@ -31,7 +34,7 @@ get_header();
     <div class="c-service">
       <div class="c-service__info">
         <h6 class="c-service__title"><span>&#8226;</span><?php the_title(); ?></h6>
-        <p class="c-service__text"><?php echo the_content() ?></p>
+        <?php echo the_content(); ?>
       </div>
 
       <?php if (has_post_thumbnail( $naseUsluge->ID ) ): ?>
@@ -40,14 +43,16 @@ get_header();
       <?php endif; ?>
     </div>
 
-    <?php } ?>
+    <?php }
+    
+    ?>
 
   </section>
 
   <!--Nasi projekti-->
 
   <section class="l-section l-section--projects">
-    <h3 id="galerija" class="l-section__title">Nasi projekti</h3>
+    <h3 id="galerija" class="c-page-title">Naši projekti</h3>
     <div class="l-projects-grid">
 
       <?php
@@ -61,15 +66,16 @@ get_header();
 
       <div class="l-projects-grid__item">
         <div class="c-card">
-          <div class="c-card__img-wrap">
-            <?php if (has_post_thumbnail( $gallery->ID ) ): ?>
-            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $gallery->ID ), 'single-post-thumbnail' ); ?>
-            <img class="c-card__img" src="<?php echo $image[0]; ?>" alt="">
-            <?php endif; ?>
-          </div>
-
+          <a href="<?php echo get_permalink(); ?>">
+            <div class="c-card__img-wrap">
+              <?php if (has_post_thumbnail( $gallery->ID ) ): ?>
+              <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $gallery->ID ), 'single-post-thumbnail' ); ?>
+              <img class="c-card__img" src="<?php echo $image[0]; ?>" alt="">
+              <?php endif; ?>
+            </div>
+          </a>
           <div class="c-card__description">
-            <p><?php echo the_content() ?></p>
+            <p><?php echo the_excerpt(); ?></p>
           </div>
         </div>
       </div>
@@ -89,9 +95,10 @@ get_header();
     
     while ($zastoBasMi->have_posts()) {
       $zastoBasMi->the_post(); ?>
-    <h3 class="l-section__title"><?php the_title(); ?></h3>
+    <h3 class="c-page-title"><?php the_title(); ?></h3>
     <?php echo the_content() ?>
     <?php } ?>
+
 
     <div class="c-about-us-grid">
 
@@ -136,12 +143,14 @@ get_header();
     
     while ($oNama->have_posts()) {
       $oNama->the_post(); ?>
-    <h3 id="o-nama" class="l-section__title"><?php the_title(); ?></h3>
+    <h3 id="o-nama" class="c-page-title"><?php the_title(); ?></h3>
     <?php echo the_content() ?>
     <?php } ?>
   </section>
+
 </main>
 
 <?php
-get_footer();
+  wp_reset_query();
+  get_footer();
 ?>

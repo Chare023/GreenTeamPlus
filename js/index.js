@@ -34,4 +34,14 @@ $(document).ready(function () {
     main.classList.remove('hide');
     documentElement.classList.remove('header-is-open');
   });
+
+
+  $('.gallery-icon').click(function() {
+		var dir = $(this).find('img').attr("src");
+    console.log(dir);
+		$('#img-wrap').hide();
+		$('#img-wrap').fadeIn('fast');
+		$('#img-wrap').find('img').attr("src",dir);
+	});
+
 });
