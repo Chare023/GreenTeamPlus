@@ -292,7 +292,7 @@ a {
   padding-top: 20px; }
 
 .c-page-title {
-  display: flex;
+  display: inline-block;
   margin: 0 auto;
   justify-content: center;
   padding: 17px;
@@ -526,6 +526,8 @@ a {
         padding: 40px 20px; } }
 
 .l-section {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   margin: 0 120px;
   color: #333;
