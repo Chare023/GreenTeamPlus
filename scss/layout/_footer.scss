@@ -1,51 +1,50 @@
 .l-footer {
-    background-color: $dark-grey;
-    color: $light-text;
+  background-color: $dark-grey;
+  color: $light-text;
 }
 
 .l-footer__logo {
-    max-height: 130px;
+  max-height: 130px;
 
-    @include tablet-portrait-down {
-        display: none;
-    }
+  @include tablet-portrait-down {
+    margin-bottom: 2rem;
+  }
 }
 
 .l-footer-container {
-    display: flex;
-    // TODO: Footer left section
-    justify-content: space-around;
-    padding: 2rem 0;
-    max-width: 1440px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  max-width: 1440px;
+  margin: 0 auto;
 
-    @include tablet-portrait-down {
-        flex-direction: column;
-        padding-top: 2rem;
-        margin-left: 0;
-    }
+  @include tablet-portrait-down {
+    flex-direction: column;
+    padding-top: 2rem;
+    margin-left: 0;
+  }
 }
 
 .l-footer__section {
-    border-left: 1px solid $border-color;
-    padding: 0 40px;
-    display: flex;
-    flex-direction: column;
+  border-left: 1px solid $border-color;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
 
-    &.l-footer__section--main {
-        flex-basis: 40%;
-        border: none;
-        max-width: fit-content;
-
-        @include tablet-portrait-down {
-            display: none;
-        }
-    }
+  &.l-footer__section--main {
+    flex-basis: 40%;
+    border: none;
+    max-width: fit-content;
 
     @include tablet-portrait-down {
-        margin-bottom: 40px;
-        padding: 0 20px 20px;
-        border-left: none;
-        border-bottom: 1px solid $border-color;
+      display: none;
     }
+  }
+
+  @include tablet-portrait-down {
+    margin-bottom: 40px;
+    padding: 0 20px 20px;
+    border-left: none;
+    border-bottom: 1px solid $border-color;
+  }
 }

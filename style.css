@@ -315,7 +315,7 @@ a {
   max-height: 130px; }
   @media (max-width: 900px) {
     .l-footer__logo {
-      display: none; } }
+      margin-bottom: 2rem; } }
 
 .l-footer-container {
   display: flex;
