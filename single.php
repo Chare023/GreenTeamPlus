@@ -20,7 +20,7 @@ get_header();
 
     <aside class="l-single-post__aside">
       <?php
-      $gallery = New WP_Query(array(
+        $gallery = New WP_Query(array(
         'posts_per_page' => 6,
         'category_name' => 'gallery'
       ));

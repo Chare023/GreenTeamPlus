@@ -62,114 +62,237 @@ add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 
 
-// add_action( 'admin_menu', 'gtp_menu_page' );
+add_action( 'admin_menu', 'gtp_menu_page' );
 
-// function gtp_menu_page() {
+function gtp_menu_page() {
 
-// 	add_menu_page(
-// 		'My Page Title', // page <title>Title</title>
-// 		'My Page', // menu link text
-// 		'manage_options', // capability to access the page
-// 		'gtp-slug', // page URL slug
-// 		'gtp_page_content', // callback function /w content
-// 		'dashicons-star-half', // menu icon
-// 		5 // priority
-// 	);
+	add_menu_page(
+		'My Page Title', // page <title>Title</title>
+		'My Page', // menu link text
+		'manage_options', // capability to access the page
+		'gtp-slug', // page URL slug
+		'gtp_page_content', // callback function /w content
+		'dashicons-star-half', // menu icon
+		5 // priority
+	);
 
-// }
+}
 
-// add_action( 'admin_menu', 'gtp_options_page' );
+function gtp_page_content(){
 
-// function gtp_options_page() {
-
-// 	add_options_page(
-// 		'My Page Title', // page <title>Title</title>
-// 		'My Page', // menu link text
-// 		'manage_options', // capability to access the page
-// 		'gtp-slug', // page URL slug
-// 		'gtp_page_content', // callback function with content
-// 		2 // priority
-// 	);
-
-// }
-
-
-// function gtp_page_content(){
-
-// 	echo '<div class="wrap">
-// 	<h1>My Page Settings</h1>
-// 	<form method="post" action="options.php">';
+	echo '<div class="wrap">
+	<h1>My Page Settings</h1>
+	<form method="post" action="options.php">';
 			
-// 		settings_fields( 'gtp_settings' ); // settings group name
-// 		do_settings_sections( 'gtp-slug' ); // just a page slug
-// 		submit_button();
+		settings_fields( 'gtp_settings' ); // settings group name
+		do_settings_sections( 'gtp-slug' ); // just a page slug
+		submit_button();
 
-// 	echo '</form></div>';
+	echo '</form></div>';
 
-// }
+}
 
-// add_action( 'admin_init',  'gtp_register_setting' );
+add_action( 'admin_init',  'gtp_register_setting' );
 
-// function gtp_register_setting(){
+function gtp_register_setting(){
 
-// 	register_setting(
-// 		'gtp_settings', // settings group name
-// 		'phone_number', // option name
-// 		'sanitize_text_field' // sanitization function
-// 	);
+	register_setting(
+		'gtp_settings', // settings group name
+		'phone_number', // option name
+		'sanitize_text_field' // sanitization function
+	);
 
-// 	add_settings_section(
-// 		'some_settings_section_id', // section ID
-// 		'', // title (if needed)
-// 		'', // callback function (if needed)
-// 		'gtp-slug' // page slug
-// 	);
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
 
-// 	add_settings_field(
-// 		'phone_number',
-// 		'Phone number',
-// 		'gtp_text_field_html', // function which prints the field
-// 		'gtp-slug', // page slug
-// 		'some_settings_section_id', // section ID
-// 		array( 
-// 			'label_for' => 'phone_number',
-// 			'class' => 'gtp-class', // for <tr> element
-// 		)
-// 	);
+	add_settings_field(
+		'phone_number',
+		'Phone number',
+		'gtp_phone_number', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'phone_number',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
 
-// }
+	register_setting(
+		'gtp_settings', // settings group name
+		'working_hours', // option name
+		'sanitize_text_field' // sanitization function
+	);
 
-// function gtp_text_field_html(){
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
 
-// 	$phoneNum = get_option( 'phone_number' );
+	add_settings_field(
+		'working_hours',
+		'Working hours',
+		'gtp_working_hours', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'working_hours',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
 
-// 	printf(
-// 		'<input type="text" id="phone_number" name="phone_number" value="%s" />',
-// 		esc_attr( $phoneNum )
-// 	);
+	register_setting(
+		'gtp_settings', // settings group name
+		'email', // option name
+		'sanitize_text_field' // sanitization function
+	);
 
-// }
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
 
-// add_filter( 'simple_register_option_pages', 'gtp_option_page' );
+	add_settings_field(
+		'email',
+		'Email',
+		'gtp_email', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'email',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
 
-// function gtp_option_page( $option_pages ) {
+	register_setting(
+		'gtp_settings', // settings group name
+		'instagram', // option name
+		'sanitize_text_field' // sanitization function
+	);
 
-// 	$option_pages[] = array(
-// 		'id'	=> 'gtp_slug',
-// 		'title' => 'My Page Settings',
-// 		'menu_name' => 'My page',
-// 		'fields' => array(
-// 			array(
-// 				'id' => 'phone_number',
-// 				'label' => 'Phone number',
-// 				'type' => 'text',
-// 			),
-//  		),
-// 	);
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
 
-// 	return $option_pages;
+	add_settings_field(
+		'instagram',
+		'Instagram',
+		'gtp_instagram', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'instagram',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
 
-// }
+	register_setting(
+		'gtp_settings', // settings group name
+		'facebook', // option name
+		'sanitize_text_field' // sanitization function
+	);
+
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
+
+	add_settings_field(
+		'facebook',
+		'Facebook',
+		'gtp_facebook', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'facebook',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
+}
+
+function gtp_phone_number (){
+	
+	$phoneNumber = get_option( 'phone_number' );
+	printf(
+		'<input type="text" id="phone_number" name="phone_number" value="%s" />',
+		esc_attr( $phoneNumber )
+	);
+
+}
+
+function gtp_working_hours (){
+	
+	$workingHours = get_option( 'working_hours' );
+	printf(
+		'<input type="text" id="working_hours" name="working_hours" value="%s" />',
+		esc_attr( $workingHours )
+	);
+
+}
+
+function gtp_email() {
+	
+	$email = get_option( 'email' );
+	printf(
+		'<input type="text" id="email" name="email" value="%s" />',
+		esc_attr( $email )
+	);
+
+}
+
+function gtp_instagram() {
+	
+	$instagram = get_option( 'instagram' );
+	printf(
+		'<input type="text" id="instagram" name="instagram" value="%s" />',
+		esc_attr( $instagram )
+	);
+
+}
+
+function gtp_facebook() {
+	
+	$facebook = get_option( 'facebook' );
+	printf(
+		'<input type="text" id="facebook" name="facebook" value="%s" />',
+		esc_attr( $facebook )
+	);
+
+}
+
+add_filter( 'simple_register_option_pages', 'gtp_option_page' );
+
+function gtp_option_page( $option_pages ) {
+
+	$option_pages[] = array(
+		'id'	=> 'gtp_slug',
+		'title' => 'My Page Settings',
+		'menu_name' => 'My page',
+		'fields' => array(
+			array(
+				'id' => 'phone_number',
+				'label' => 'Phone number',
+				'type' => 'text',
+
+ 			),
+ 		),
+	);
+
+	return $option_pages;
+
+}
 
 
 ?>

@@ -312,9 +312,7 @@ a {
   color: #EBEBEB; }
 
 .l-footer__logo {
-  max-height: 130px;
-  position: absolute;
-  margin-top: 32px; }
+  max-height: 130px; }
   @media (max-width: 900px) {
     .l-footer__logo {
       display: none; } }
@@ -323,7 +321,8 @@ a {
   display: flex;
   justify-content: space-around;
   padding: 2rem 0;
-  margin-left: 30%; }
+  max-width: 1440px;
+  margin: 0 auto; }
   @media (max-width: 900px) {
     .l-footer-container {
       flex-direction: column;
