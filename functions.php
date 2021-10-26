@@ -196,6 +196,7 @@ function gtp_register_setting(){
 		)
 	);
 
+	// facebook label
 	register_setting(
 		'gtp_settings', // settings group name
 		'facebook', // option name
@@ -217,6 +218,84 @@ function gtp_register_setting(){
 		'some_settings_section_id', // section ID
 		array( 
 			'label_for' => 'facebook',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
+
+	// facebook url
+	register_setting(
+		'gtp_settings', // settings group name
+		'facebook_url', // option name
+		'sanitize_text_field' // sanitization function
+	);
+
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
+
+	add_settings_field(
+		'facebook_url',
+		'Facebook url',
+		'gtp_facebook_url', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'facebook_url',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
+
+	// instagram url
+	register_setting(
+		'gtp_settings', // settings group name
+		'instagram_url', // option name
+		'sanitize_text_field' // sanitization function
+	);
+
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
+
+	add_settings_field(
+		'instagram_url',
+		'instagram url',
+		'gtp_instagram_url', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'instagram_url',
+			'class' => 'gtp-class', // for <tr> element
+		)
+	);
+
+	// services settings
+	register_setting(
+		'gtp_settings', // settings group name
+		'service_item', // option name
+		'sanitize_text_field' // sanitization function
+	);
+
+	add_settings_section(
+		'some_settings_section_id', // section ID
+		'', // title (if needed)
+		'', // callback function (if needed)
+		'gtp-slug' // page slug
+	);
+
+	add_settings_field(
+		'service_item',
+		'Service Item',
+		'gtp_service_list', // function which prints the field
+		'gtp-slug', // page slug
+		'some_settings_section_id', // section ID
+		array( 
+			'label_for' => 'service_item',
 			'class' => 'gtp-class', // for <tr> element
 		)
 	);
@@ -268,6 +347,36 @@ function gtp_facebook() {
 	printf(
 		'<input type="text" id="facebook" name="facebook" value="%s" />',
 		esc_attr( $facebook )
+	);
+
+}
+
+function gtp_facebook_url() {
+	
+	$facebookUrl = get_option( 'facebook_url' );
+	printf(
+		'<input type="text" id="facebook_url" name="facebook_url" value="%s" />',
+		esc_attr( $facebookUrl )
+	);
+
+}
+
+function gtp_instagram_url() {
+	
+	$instagramUrl = get_option( 'instagram_url' );
+	printf(
+		'<input type="text" id="instagram_url" name="instagram_url" value="%s" />',
+		esc_attr( $instagramUrl )
+	);
+
+}
+
+function gtp_service_list (){
+	
+	$serviceItem = get_option( 'service_item' );
+	printf(
+		'<input type="text" id="service_item" name="service_item" value="%s" />',
+		esc_attr( $serviceItem )
 	);
 
 }
