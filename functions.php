@@ -67,8 +67,8 @@ add_action( 'admin_menu', 'gtp_menu_page' );
 function gtp_menu_page() {
 
 	add_menu_page(
-		'My Page Title', // page <title>Title</title>
-		'My Page', // menu link text
+		'Details Settings', // page <title>Title</title>
+		'Details Settings', // menu link text
 		'manage_options', // capability to access the page
 		'gtp-slug', // page URL slug
 		'gtp_page_content', // callback function /w content
@@ -81,7 +81,7 @@ function gtp_menu_page() {
 function gtp_page_content(){
 
 	echo '<div class="wrap">
-	<h1>My Page Settings</h1>
+	<h1>Details settings</h1>
 	<form method="post" action="options.php">';
 			
 		settings_fields( 'gtp_settings' ); // settings group name
@@ -278,8 +278,8 @@ function gtp_option_page( $option_pages ) {
 
 	$option_pages[] = array(
 		'id'	=> 'gtp_slug',
-		'title' => 'My Page Settings',
-		'menu_name' => 'My page',
+		'title' => 'Details Settings',
+		'menu_name' => 'Details Settings',
 		'fields' => array(
 			array(
 				'id' => 'phone_number',
