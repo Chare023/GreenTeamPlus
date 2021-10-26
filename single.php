@@ -3,7 +3,7 @@
 get_header();
 
 // if (have_posts()) : while (have_posts()) : the_post(); ?>
-<div class="l-ctn l-ctn--single-post">
+<div class="l-ctn l-ctn--single-post" id="main-ctn">
     <!-- TODO: PAGE TITLE -->
   <h1 class="c-page-title c-page-title--single "><?php the_title(); ?></h1>
   
