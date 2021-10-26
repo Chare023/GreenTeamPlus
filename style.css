@@ -28,6 +28,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+h2 {
+  margin: 0; }
+
 .u-text-center {
   text-align: center; }
 
@@ -215,7 +218,8 @@ a {
 
 .c-card__title {
   margin-bottom: 10px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-size: 1rem; }
   @media (max-width: 1100px) {
     .c-card__title {
       font-size: 24px; } }

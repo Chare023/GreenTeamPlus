@@ -6,7 +6,7 @@
   <div class="l-footer-container">
 
     <div class="l-footer__logo-wrap">
-      <img class="l-footer__logo" src="<?php echo get_template_directory_uri().'/FooterLogo.png'; ?>">
+      <img class="l-footer__logo" src="<?php echo get_template_directory_uri().'/FooterLogo.png'; ?>" alt="<?php the_title()?>" title="<?php the_title()?>">
     </div>
 
     <div class="l-footer__section">

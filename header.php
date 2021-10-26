@@ -21,7 +21,7 @@
     <div class="l-header__left">
       <div class="l-header__logo-wrap">
         <a href="<?php echo get_home_url(); ?>"> 
-          <img class="l-header__logo" src="<?php echo get_template_directory_uri().'/screenshot.png'; ?>">
+          <img class="l-header__logo" src="<?php echo get_template_directory_uri().'/screenshot.png'; ?>" alt="<?php the_title()?>" title="<?php the_title()?>">
         </a>
       </div>
       <?php

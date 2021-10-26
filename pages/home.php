@@ -10,9 +10,9 @@ get_header();
 
 <main class="l-ctn" id="main-ctn">
   <div class="c-slider">
-    <img src="<?php echo get_field('slider_image_1')['url']; ?>" alt="">
-    <img src="<?php echo get_field('slider_image_2')['url']; ?>" alt="">
-    <img src="<?php echo get_field('slider_image_3')['url']; ?>" alt="">
+    <img src="<?php echo get_field('slider_image_1')['url']; ?>" alt="Slider image" title="Slider image">
+    <img src="<?php echo get_field('slider_image_2')['url']; ?>" alt="Slider image" title="Slider image">
+    <img src="<?php echo get_field('slider_image_3')['url']; ?>" alt="Slider image" title="Slider image">
   </div>
 
 
@@ -20,7 +20,7 @@ get_header();
 
  
   <section class="l-section l-section--services">
-    <h3 id="usluge" class="c-page-title">Naše usluge</h3>
+    <h1 id="usluge" class="c-page-title">Naše usluge</h1>
     
     <?php
       $naseUsluge = New WP_Query(array(
@@ -39,7 +39,7 @@ get_header();
 
       <?php if (has_post_thumbnail( $naseUsluge->ID ) ): ?>
       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $naseUsluge->ID ), 'single-post-thumbnail' ); ?>
-      <img class="c-service__img" src="<?php echo $image[0]; ?>" alt="">
+      <img class="c-service__img" src="<?php echo $image[0]; ?>" alt="<?php the_title()?>" title="<?php the_title()?>">
       <?php endif; ?>
     </div>
 
@@ -52,7 +52,7 @@ get_header();
   <!--Nasi projekti-->
 
   <section class="l-section l-section--projects">
-    <h3 id="galerija" class="c-page-title">Naši projekti</h3>
+    <h2 id="galerija" class="c-page-title">Naši projekti</h2>
     <div class="l-projects-grid">
 
       <?php
@@ -66,11 +66,11 @@ get_header();
 
       <div class="l-projects-grid__item">
         <div class="c-card">
-          <a href="<?php echo get_permalink(); ?>">
+          <a href="<?php echo get_permalink(); ?>" title="<?php the_title()?>">
             <div class="c-card__img-wrap">
               <?php if (has_post_thumbnail( $gallery->ID ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $gallery->ID ), 'single-post-thumbnail' ); ?>
-              <img class="c-card__img" src="<?php echo $image[0]; ?>" alt="">
+              <img class="c-card__img" src="<?php echo $image[0]; ?>" alt="<?php the_title()?>" title="<?php the_title()?>">
               <?php endif; ?>
             </div>
           </a>
